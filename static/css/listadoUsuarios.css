@@ -1,0 +1,39 @@
+@import url("style.css") root;
+*{
+ /* overflow-y: hidden;*/
+  overflow-x: hidden;
+}
+#ayuda{
+    margin-left: 95% !important;
+    font-size: x-large !important;
+    color:var(--color1-donedeal) ;
+   transition: all 15ms;
+ }
+ #ayuda:hover{
+     color:var(--color2-donedeal) ;
+ }
+ .navbar{
+    margin-bottom: 5%;
+ }
+.card{
+    width: 90% !important;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    text-align: center;
+    box-shadow:  .05px 0.5px 10px var(--color1-donedeal) ;
+    }
+.card h5{
+  margin: 1rem 2rem 2rem 2rem; 
+  
+}    
+.card img{
+    margin: 0 auto;
+ 
+}
+.card h6{
+    margin: 1rem 0 1rem 0;
+}
+.card button{
+    margin-bottom: 2rem;
+}

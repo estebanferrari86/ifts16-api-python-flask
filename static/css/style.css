@@ -1,0 +1,34 @@
+:root{
+        --color0-donedeal:#fbc81d;
+        --color1-donedeal:#162d72;
+        --color2-donedeal:#e84952;
+        --background-color0:#EAEDED;
+        --background-color1:#EBEBEB;
+}
+@import url(navBar.css) all;
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./fonts/Proxima Nova Font.otf');
+    src: local('Proxima Nova'), local('Proxima Nova'),
+        url('./fonts/Proxima Nova Font.otf?#iefix') format('opentype')
+}
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background: var(--background-color0);
+}
+header {
+   
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, sans-serif;
+}
+
+main {
+    background: var(--background-color0);
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, sans-serif;
+}
