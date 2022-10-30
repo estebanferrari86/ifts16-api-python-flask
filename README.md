@@ -4,7 +4,7 @@
 
 git clone https://github.com/Jebusx33/ifts16-spsa-tpif-flask.git
 
-cd flask-crud-contacts-app
+cd /ifts16-spsa-tpif-flask
 
 pip install -r requirements.txt
 
