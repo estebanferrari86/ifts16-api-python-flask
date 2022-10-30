@@ -3,6 +3,7 @@
 ----------------------------------------------------------
 
 Linux 
+
 sudo apt-get install pip
 
 sudo apt-get install flask
