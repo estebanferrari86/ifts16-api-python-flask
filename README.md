@@ -22,4 +22,6 @@ cd /ifts16-spsa-tpif-flask
 pip install -r requirements.txt
 
 python app.py
+*************************************************************
+Linux ejecutar python app.py o python3 app.py
 
