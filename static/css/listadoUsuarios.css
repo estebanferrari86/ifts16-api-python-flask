@@ -1,4 +1,4 @@
-@import url("style.css") root;
+@import url("../css/style.css") root;
 *{
  /* overflow-y: hidden;*/
   overflow-x: hidden;

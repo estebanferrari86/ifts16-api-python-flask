@@ -59,7 +59,7 @@
               
 
               <input class="form-control me-2" type="search" placeholder="Producto o Servicio" aria-label="Buscar" id="inputSearch">
-              <button class="btn btn-outline-primary" id="btnSearch" type="submit">Buscar</button>
+              <button class="btn btn-outline-warning" id="btnSearch" type="submit">Buscar</button>
             </div>
             </form>
 
@@ -72,13 +72,10 @@
                   <li><button type="button" class="btn btn-outline-primary">Ingresa tu usuario y contraseña</button></li>
                   <li><a class="dropdown-item" href="{{url_for('registro_usuario')}}">Registrate</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="{{url_for('muestra_usuario')}}">Administrador</a></li>
                 </ul>
               </li>
-               
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
+              
               </ul>
 
           </div>

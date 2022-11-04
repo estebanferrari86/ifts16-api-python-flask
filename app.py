@@ -59,13 +59,34 @@ def borrar_usuario(id):
 
 
 
-@app.route('/administrador/editar-usuario/<id>')
-def editar_usuario(id):
+
+
+
+@app.route('/administrador/usuario/<id>')
+def get_user(id):
     cur = mysql.connection.cursor()
     cur.execute('SELECT * FROM usuario WHERE id_usuario = %s', (id))
     data = cur.fetchall()
-    return render_template('administrador/editarUsuario.html', usuario=data[0])
+    print(data[0])
+    return render_template('/Administrador/editarUsuario.html', contact = data[0])
+
+@app.route('/administrador/usuarioEditado/<id>', methods = ['POST'])
+def editar_user(id):
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        apellido = request.form['apellido']
+        dni = request.form['dni']
+        direccion = request.form['direccion']
+        email = request.form['email']
+        usuario = request.form['usuario']
+        contrasenia = request.form['contrasenia']
+        cur = mysql.connection.cursor()
+        cur.execute('UPDATE `usuario` SET `nombre` = "%s", `apellido` = "%s", `dni` = "%s", `direccion` = "%s", `ususario` = "%s", `contrasenia` = "%s", `email` = "%s" WHERE `usuario`.`id_usuario` = %s;', (nombre, apellido, dni, direccion, usuario, contrasenia, email,id))
+        mysql.connection.commit()
+       # flash('Usuario actualizado')
+        return redirect(url_for('muestra_usuario'))
+
+
 
 if __name__ == '__main__':
     app.run(port = 3000, debug = True)
-
