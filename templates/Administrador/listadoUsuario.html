@@ -16,8 +16,8 @@
     <!--Css-->
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/css/normalize.css">
-    <link rel="stylesheet" href="../../static/css/listadoUsuarios.css">
     <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/listadoUsuarios.css">
     <link rel="stylesheet" href="../../static/css/navBar.css">
 </head>
 
@@ -67,7 +67,7 @@
                             <td>{{ usuario.6 }}</td>
                             <td>{{ usuario.7 }}</td>
                             <td>{{ usuario.8 }}</td>
-                            <td><a href="/usuario/edit/{{editar_usuario}}"><button type="button" class="btn btn-warning">editar</button></a></td>
+                            <td><a href="/administrador/usuario/{{usuario.0}}"><button type="button" class="btn btn-warning">editar</button></a></td>
                             <td><a href="/usuario/borrar/{{usuario.0}}"><button type="button" class="btn btn-danger">Borrar</button></a></td>
                         </tr>
                         {% endfor %}

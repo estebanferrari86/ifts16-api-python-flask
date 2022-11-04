@@ -16,8 +16,8 @@
     <!--Css-->
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/normalize.css">
-    <link rel="stylesheet" href="/static/css/registro.css">
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/registro.css">
     <link rel="stylesheet" href="/static/css/navBar.css">
 </head>
 
@@ -44,25 +44,17 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
          
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-{% for message in messages %}
-<p>{{ message }}</p>
-{% endfor %}
-{% endif %}
-{% endwith %}
-
-                <form class="row g-3" action="/editar-usuario" method="POST">
+                <form class="row g-3" action="/administrador/usuarioEditado/{{contact.0}}" method="POST">
                     <div class="col-md-4">
                       <label for="validationServer01" class="form-label">Nombre o Nombres</label>
-                      <input type="text" class="form-control " id="validationServer01" name="nombre" value="{{usuario.1}}" required>
+                      <input type="text" class="form-control " id="validationServer01" name="nombre" value="{{contact.1}}" required>
                       <div class="valid-feedback">
                         ¡Se ve bien!
                       </div>
                     </div>
                     <div class="col-md-4">
                       <label for="validationServer02" class="form-label">Apellido o Apellidos</label>
-                      <input type="text" class="form-control " id="validationServer02"  name="apellido" value="{{usuario.2}}" required>
+                      <input type="text" class="form-control " id="validationServer02"  name="apellido" value="{{contact.2}}" required>
                       <div class="valid-feedback">
                         ¡Se ve bien!
                       </div>
@@ -71,7 +63,7 @@
                       <label for="validationServerUsername" class="form-label">Nombre de Usuario</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend3"></span>
-                        <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" name="usuario" value="{{usuario.3}}" required>
+                        <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" name="usuario" value="{{contact.5}}" required>
                         <div id="validationServerUsernameFeedback" class="invalid-feedback">
                          Por favor, elija un nombre de usuario.
                         </div>
@@ -81,7 +73,7 @@
                       <label for="validationServerUsername" class="form-label">Contraseña</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend3"></span>
-                        <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" name="contrasenia" value="{{usuario.4}}" required>
+                        <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" name="contrasenia" value="{{contact.6}}" required>
                         <div id="validationServerUsernameFeedback" class="invalid-feedback">
                          Por favor, elija una contraseña.
                         </div>
@@ -89,12 +81,12 @@
                     </div>
                     <div class="col-md-4">
                       <label for="validationDefault01" class="form-label">Mail</label>
-                      <input type="mail" name="email"   class="form-control " id="validationServer03" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" name="mail" value="{{usuario.5}}" required >
+                      <input type="mail" name="email"   class="form-control " id="validationServer03" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" name="mail" value="{{contact.7}}" required >
         
                     </div>
                     <div class="col-md-6">
                       <label for="validationServer03" class="form-label">Dirección</label>
-                      <input type="text" class="form-control " id="validationServer03" aria-describedby="validationServer03Feedback" name="direccion" value="{{usuario.6}}" required>
+                      <input type="text" class="form-control " id="validationServer03" aria-describedby="validationServer03Feedback" name="direccion" value="{{contact.4}}" required>
                       <div id="validationServer03Feedback" class="invalid-feedback">
                         Proporcione una dirección válida.
                       </div>
@@ -136,14 +128,14 @@
                   -->
                     <div class="col-md-3">
                       <label for="validationServer05" class="form-label">Numero de Documento</label>
-                      <input type="text" class="form-control " id="validationServer05" aria-describedby="validationServer05Feedback" pattern="[0-9]}" name="dni" value="{{usuario.7}}" required>
+                      <input type="text" class="form-control " id="validationServer05" aria-describedby="validationServer05Feedback" pattern="[0-9]}" name="dni" value="{{contact.3}}" required>
                       <div id="validationServer05Feedback" class="invalid-feedback">
                         Proporcione un numero de Documento válido.
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-check ">
-                        <input class="form-check-input  " type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" value="{{usuario.8}}"required>
+                        <input class="form-check-input  " type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
                         <label class="form-check-label" for="invalidCheck3" id="terminos">
                           Acepto los términos y condiciones
                         </label>
