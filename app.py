@@ -41,7 +41,7 @@ def alta_usuario():
         usuario = request.form['usuario']
         contrasenia = request.form['contrasenia']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO `usuario` (`nombre`, `apellido`, `dni`, `direccion`, `ususario`, `contrasenia`, `email`) VALUES (%s, %s, %s, %s, %s, %s, %s)', (nombre, apellido, dni, direccion, usuario, contrasenia, email))
+        cur.execute('INSERT INTO `usuario` (`nombre`, `apellido`, `dni`, `direccion`, `usuario`, `contrasenia`, `email`) VALUES (%s, %s, %s, %s, %s, %s, %s)', (nombre, apellido, dni, direccion, usuario, contrasenia, email))
         mysql.connection.commit()
         flash('Usario creado, ya puede ingresar')
         return redirect(url_for('index'))
@@ -81,7 +81,7 @@ def editar_user(id):
         usuario = request.form['usuario']
         contrasenia = request.form['contrasenia']
         cur = mysql.connection.cursor()
-        cur.execute('UPDATE `usuario` SET `nombre` = "%s", `apellido` = "%s", `dni` = "%s", `direccion` = "%s", `ususario` = "%s", `contrasenia` = "%s", `email` = "%s" WHERE `usuario`.`id_usuario` = %s;', (nombre, apellido, dni, direccion, usuario, contrasenia, email,id))
+        cur.execute('UPDATE `usuario` SET `nombre` = "%s", `apellido` = "%s", `dni` = "%s", `direccion` = "%s", `usuario` = "%s", `contrasenia` = "%s", `email` = "%s" WHERE `usuario`.`id_usuario` = %s;', (nombre, apellido, dni, direccion, usuario, contrasenia, email,id))
         mysql.connection.commit()
        # flash('Usuario actualizado')
         return redirect(url_for('muestra_usuario'))
