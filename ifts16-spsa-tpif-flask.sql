@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
-  `id_usuario` int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(9) UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `apellido` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `dni` varchar(12) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `direccion` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `ususario` varchar(12) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `contrasenia` char(16) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `usuario` varchar(18) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `contrasenia` char(18) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -44,10 +44,10 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `dni`, `direccion`, `ususario`, `contrasenia`, `email`) VALUES
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `dni`, `direccion`, `usuario`, `contrasenia`, `email`) VALUES
 (1, 'Admininstrador', 'DoneDeal', '123456789', 'sarasa123', 'admin', '1234', 'administrador@dondeal.com'),
-(10, 'elimina', 'usuario', '00000', 'sarasadsda 12311', 'user4', '1234', 'elimina@usuario.com'),
-(9, 'nuevo', 'test', '00000', 'sarasadsda 12311', 'testListado', '1234', 'test@listado.com');
+(2, 'elimina', 'usuario', '00000', 'sarasadsda 12311', 'user4', '1234', 'elimina@usuario.com'),
+(3, 'nuevo', 'test', '00000', 'sarasadsda 12311', 'testListado', '1234', 'test@listado.com');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
