@@ -11,8 +11,6 @@ mysql= MySQL(app)
 #settings
 app.secret_key ='mysecretkey'
 
-
-
 @app.route('/')
 def index():
     return render_template('index.html') 
@@ -47,8 +45,6 @@ def alta_usuario():
         return redirect(url_for('index'))
 
 
-
-
 @app.route('/usuario/borrar/<string:id>')
 def borrar_usuario(id):
     cur = mysql.connection.cursor()
@@ -58,14 +54,10 @@ def borrar_usuario(id):
     return redirect(url_for('muestra_usuario'))
 
 
-
-
-
-
 @app.route('/administrador/usuario/<id>')
 def get_user(id):
     cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM usuario WHERE id_usuario = %s', (id))
+    cur.execute('SELECT * FROM usuario WHERE id_usuario = %s', [id])
     data = cur.fetchall()
     print(data[0])
     return render_template('/Administrador/editarUsuario.html', contact = data[0])
