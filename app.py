@@ -3,8 +3,8 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 #conectar a la Base de Datos
 app.config['MYSQL_HOST'] ='localhost'
-app.config['MYSQL_USER'] ='admin' #susario
-app.config['MYSQL_PASSWORD'] ='root' #contraseña
+app.config['MYSQL_USER'] ='root' #susario
+app.config['MYSQL_PASSWORD'] ='admin' #contraseña
 app.config['MYSQL_DB'] ='ifts16-spsa-tpif-flask' #nombre BD
 mysql= MySQL(app)
 
